@@ -1,11 +1,11 @@
 # Azure Entra ID Home Lab
-## Attack on Titan Theme | User Management and Help Desk Fundamentals
+## User Management and Help Desk Fundamentals
 
 ---
 
 ## Overview
 
-This lab covers foundational Azure Entra ID (formerly Azure Active Directory) tasks including user provisioning, device management concepts, and simulating an end-user login experience from a help desk perspective. This lab is themed from "Attack on Titan" (one of my favorite tv shows), with characters mapped to employee roles.
+This lab covers foundational Azure Entra ID (formerly Azure Active Directory) tasks including user provisioning, device management concepts, and simulating an end-user login experience. This lab is themed from "Attack on Titan" (one of my favorite tv shows), with characters mapped to employee roles.
 
 **Platform:** Microsoft Azure (Free Trial)
 **Admin Center:** portal.azure.com / Entra Admin Center
@@ -36,7 +36,7 @@ You can bulk create multiple users by adding their info to a properly formatted 
 
 All users were successfully added to the tenant.
 
-> **[SCREENSHOT: aotBulkUsersCreate.png]**
+![Bulk user creation via CSV](Screenshots/aotBulkUsersCreate.png)
 
 From what I understand, bulk creation is ideal during large-scale onboarding events, department migrations, or company acquisitions where dozens or hundreds of accounts need to be provisioned at once.
 
@@ -54,7 +54,7 @@ New-AzADUser
 
 The command prompted for required fields including display name, username, and password. The user was created successfully. Pretty simple and straightforward.
 
-> **[SCREENSHOT: cloudShellUserCreate.png]**
+![User creation via Cloud Shell](Screenshots/cloudShellUserCreate.png)
 
 **Note:** Apparently `New-AzADUser` is part of the older Az PowerShell module. Current Microsoft documentation recommends `New-MgUser` from the Microsoft Graph module for new implementations. Both accomplish the same task.
 
@@ -84,7 +84,7 @@ My goal was to simply experience the tenant from an end-user perspective.
 4. Completed the forced password change prompt
 5. Arrived at Eren's user dashboard
 
-> **[SCREENSHOT: ErenLogInM365.png]**
+![Employee login simulation](Screenshots/ErenLogInM365.png)
 
 Eren's dashboard showed his account overview and the option to install Microsoft 365 apps. His view had no access to admin functions, confirming role-based access is working correctly.
 
@@ -96,7 +96,7 @@ Next I got practice with configuring roles and administrators, like assigning th
 
 I'm still new to the specific roles you'd want to assign to admins, and what you'd want people to be able to do and access; but knowing HOW to configure those roles is my goal for now, and this lab helped achieve that. It's as simple as navigating to Entra Admin Center > Roles and Administrators, and then selecting the role and assigning users to it so they get access to do whatever thay role allows.
 
-> **[SCREENSHOT: rolesAndAdminAccess.png]**
+![Roles and administrator access configuration](Screenshots/rolesAndAdminAccess.png)
 
 ---
 
@@ -104,7 +104,7 @@ I'm still new to the specific roles you'd want to assign to admins, and what you
 
 Next I hit a roadblock with administrative units. In short, based on what I've learned, administrative units are used in conjunction with groups to delegate admin access to select users. If I've created a group in an enterprise, say "Help Desk", and I want that group to have admin rights over select users in the administrative unit named "sales department", for example, I'd navigate to the roles and administrators setting of that Admin Unit and assign the "Help Desk" group the role of "User Administrator" to the admin unit, and voila, that Help Desk group now has access to help those specific users in that Admin Unit. Unfortunately with my Entra ID free trial, I could only go so far:
 
-> **[SCREENSHOT: AdminUnitRoadblock.png]**
+![Administrative unit free trial limitation](Screenshots/AdminUnitRoadblock.png)
 
 ---
 
