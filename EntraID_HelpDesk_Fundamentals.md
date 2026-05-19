@@ -92,9 +92,9 @@ Eren's dashboard showed his account overview and the option to install Microsoft
 
 ## Note: Roles and Administrators
 
-Next I got practice with configuring roles and administrators, like assigning the custom role of being able to read sign-in reports to a select couple of administrators. Why? Entra ID comes with pre-configured roles you can assign to admins, but if there isn't one that fits your needs, you can also create custom roles, with the end goal being assigning roles to admins based on their job needs so they only have authorization to complete tasks and access resources necessary to do their job. 
+Next I got practice with configuring roles and administrators, like assigning the custom role of being able to read sign-in reports to a select couple of administrators. Why? Entra ID comes with pre-configured roles you can assign to admins, but if there aren't any that fit your needs, you can also create custom roles, with the end goal being assigning roles to admins based on their job needs so they only have authorization to complete tasks and access resources necessary to do their job. 
 
-I'm still new to the specific roles you'd want to assign to admins, and what you'd want people to be able to do and access; but knowing HOW to configure those roles is my goal for now, and this lab helped achieve that. It's as simple as navigating to Entra Admin Center > Roles and Administrators, and then selecting the role and assigning users to it so they get access to do whatever thay role allows.
+I'm still new to the specific roles you'd want to assign to admins, and what you'd want people to be able to do and access; but knowing HOW to configure those roles is my goal for now, and this lab helped achieve that. It's as simple as navigating to Entra Admin Center > Roles and Administrators, and then selecting the role and assigning users to it so they get access to do whatever that role allows.
 
 ![Roles and administrator access configuration](Screenshots/rolesAndAdminAccess.png)
 
@@ -110,4 +110,4 @@ Next I hit a roadblock with administrative units. In short, based on what I've l
 
 ## Note: Conditional Access
 
-A note on conditional access: from what I understand, conditional access is application-specific. Meaning, you're only granted access to that app if you meet certain conditions such as location, device IP (is it trusted or suspicious?), risk level, and others. If you meet these conditions you're granted access, if not, you're either blocked or provided guidance on how to meet compliance standards to gain conditional access once again. Conditional access differs from identity beCAUSE it's application-specific. I didn't get very far actually configuring conditiional access given the restrictions on my free trial; but this is helpful to understand nonetheless.
+A note on conditional access: from what I understand, conditional access is application-specific. Meaning, you're only granted access to that app if you meet certain conditions such as location, device IP (is it trusted or suspicious?), risk level, and others. If you meet these conditions you're granted access, if not, you're either blocked or provided guidance on how to meet compliance standards to gain conditional access once again. Conditional access differs from identity beCAUSE it's application-specific. I didn't get very far actually configuring conditional access given the restrictions on my free trial; but this is helpful to understand nonetheless.
